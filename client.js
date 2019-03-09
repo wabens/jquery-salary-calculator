@@ -65,16 +65,17 @@ function displayMonthly(total){
     $('#monthlyDisplay').append(`<p id="monthlyCounter">Total Monthly: ${total}</p>`)
 }
 
-// removes employee from array and re-displays employees
-function removeEmployee(event){
-    console.log('employeeIndex: ', $(this).data('index'))
-    let i=$(this).data('index')
-    employeeList.splice(i,1)
-    console.log(employeeList);
-    displayEmployee(employeeList)
+// removes employee from array based on data from add EMployee and re-displays employees
+function removeEmployee(){
+    let i=$(this).data('index');
+    let removed = employeeList.splice(i,1);
+    console.log('removed: ', removed[0]);
+    totalMonthly-=Number(removed[0].salary)
+    console.log(totalMonthly);
+    displayMonthly(totalMonthly)
+    displayEmployee(employeeList);
+
     
-
-
 }
 
 
