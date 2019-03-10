@@ -31,7 +31,6 @@ function addEmployee(){
     totalMonthly+=Number(employee.salary);
     console.log('total: ', totalMonthly);
     displayMonthly(totalMonthly)
-
 }
 
 // Recieve employee from addEmployee. Empty contents of .tableData
@@ -45,7 +44,7 @@ function displayEmployee(employeeList){
         <td> ${employeeList[i].id}</td>
         <td> ${employeeList[i].title}</td>
         <td> ${employeeList[i].salary}</td>
-        <td><button class="removeButton" id="removeButtonIndex${i}">-</button> 
+        <td id="removeButtonCell"><button class="removeButton" id="removeButtonIndex${i}">-</button> 
         </tr>`);
         $("#employeeDisplay").append(dataRow);
         addData(i)
@@ -62,7 +61,13 @@ function addData(i){
 
 function displayMonthly(total){
     $('#monthlyDisplay').empty()
-    $('#monthlyDisplay').append(`<p id="monthlyCounter">Total Monthly: ${total}</p>`)
+    $('#monthlyDisplay').append(`<p id="monthlyCounter">Total Monthly: ${total/12}</p>`)
+    if (total/12 > 20000){
+        $('#monthlyCounter').css('background-color', 'red')
+    }
+    else{
+        $('#monthlyCounter').css('background-color', 'none')
+    }
 }
 
 // removes employee from array based on data from add EMployee and re-displays employees

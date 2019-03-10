@@ -11,21 +11,21 @@
 </head>
 <body>
     <h1>Salary Calculator</h1>
-    <div id="employeeInSpace">
+    <div id="inputOutput">
+     <div id="employeeInSpace">
         <h3>Add Employee</h3>
         <input type="text" id="firstIn" placeholder="First Name">
         <input type="text" id="lastIn" placeholder="Last Name">
         <input type="text" id="idIn" placeholder="ID #">
         <input type="text" id="titleIn" placeholder="Title">
         <input type="text" id="salaryIn" placeholder="Salary">
-    </div>
-    <div id="submitSpace">
         <button id="employeeIn">Submit</button>
     </div>
+
     <div id="outputSpace">
-        <h3>Employees</h3>
+        <h3 id="outputHeading">Employees</h3>
         <table id="employeeDisplay">
-            <tr>
+            <tr id="tableHead">
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>ID</th>
@@ -33,8 +33,10 @@
                 <th>Annual Salary</th>
             </tr>
         </table>
+        <div id="monthlyDisplay">
+        </div>
     </div>
-    <div id="monthlyDisplay">
+
     </div>
 </body>
 </html>
