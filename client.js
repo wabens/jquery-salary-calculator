@@ -66,6 +66,7 @@ function displayMonthly(total){
 }
 
 // removes employee from array based on data from add EMployee and re-displays employees
+// updates totalMonthly salary and redisplays monthly
 function removeEmployee(){
     let i=$(this).data('index');
     let removed = employeeList.splice(i,1);
@@ -74,8 +75,6 @@ function removeEmployee(){
     console.log(totalMonthly);
     displayMonthly(totalMonthly)
     displayEmployee(employeeList);
-
-    
 }
 
 

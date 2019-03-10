@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-content: center;  
+}
+h1{
+    margin: auto;
+}
+
+div {
+    width: 800px;
+    margin: auto;
+}
+table{
+    margin: auto;
+    width: 800px;
+}
+
+#monthlyCounter{
+    position: relative;
+    left: 600px;
+}
+
+#employeeIn{
+    position: relative;
+    left: 600px;
+    margin: 15px;
+}
