@@ -28,9 +28,18 @@ function addEmployee(){
     employeeList.push(employee)
     console.log(employeeList);
     displayEmployee(employeeList);
+    clearInputs();
     totalMonthly+=Number(employee.salary);
     console.log('total: ', totalMonthly);
     displayMonthly(totalMonthly)
+}
+
+function clearInputs(){
+    $('#firstIn').val('');
+    $('#lastIn').val('');
+    $('#idIn').val('');
+    $('#titleIn').val('');
+    $('#salaryIn').val('');
 }
 
 // Recieve employee from addEmployee. Empty contents of .tableData
