@@ -70,7 +70,7 @@ function addData(i){
 
 function displayMonthly(total){
     $('#monthlyDisplay').empty()
-    $('#monthlyDisplay').append(`<p id="monthlyCounter">Total Monthly: ${total/12}</p>`)
+    $('#monthlyDisplay').append(`<p id="monthlyCounter">Total Monthly: $${total/12}</p>`)
     if (total/12 > 20000){
         $('#monthlyCounter').css('background-color', 'red')
     }
